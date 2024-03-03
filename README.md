@@ -1,27 +1,42 @@
 # coffee-tracker
 Never run out of coffee again ☕
 
-# Setting up development environment
+# Kotlin Quick Start
 
-1. Install Java
+## Install SDKMAN
 
+```sh
+curl -s "https://get.sdkman.io" | bash
 ```
-sudo apt install default-jdk
-```
+Restart terminal.
 
-2. Install Kotlin native command line compiler
+## Install Java 
 
-Follow instructions on https://kotlinlang.org/docs/native-command-line-compiler.html
-
-# Building
-
-```
-kotlinc-native main.kt -o main
+```sh
+sdk install java 21.0.2-tem
 ```
 
-# Running
+## Install Kotlin
 
+```sh
+sdk install kotlin
 ```
-./main.kexe
+
+## Write "Hello, World!" program
+
+```sh
+echo 'fun main() { println("Hello, World!") }' > hello.kt
+```
+
+### Compile
+
+```sh
+kotlinc hello.kt -include-runtime -d hello.jar
+```
+
+### Run
+
+```sh
+java -jar hello.jar
 ```
 
